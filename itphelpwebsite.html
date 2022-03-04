@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/66a653de90.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link rel = "stylesheet" media= "only screen and (max-width: 480px)" href = "mobile.css" />
+  	<link rel = "stylesheet" media= "only screen and (min-width: 481px) and (max-width: 1366px)" href = "tablet.css"/>
+  	<link rel = "stylesheet" media= "only screen and (min-width: 1367px)" href = "desktop.css" />
+
+    <!--- GLIDE JS --->
+
+    <!--<script src ="vivus.js"></script>-->
+    <script src="script.js" defer async></script>
+    <!-- <script src="./path-to-two/two.js"></script> -->
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div id=headerText>
+      <h7>samantha kimura</h7>
+    </div>
+  </div>
+
+  <div id="lines">
+    <div id="long">
+
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="gallery.html">gallery</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="https://wp.nyu.edu/sammykimura/">blog</a></li>
+        </ul>
+    </div>
+
+    <div id="med">
+    </div>
+
+    <div id="short">
+    </div>
+  </div>
+
+  <!-- <div class="table">
+
+    <div class="headerText">
+    <h1></h1>
+    </div>
+
+    <div class="tableContainer">
+      <a href="index.html">
+        <div class="home index">
+          <h2>home</h2>
+        </div>
+      </a>
+
+
+      <a href="about.html">
+        <div class="about index">
+          <h2>about</h2>
+        </div>
+      </a>
+
+      <a href="gallery.html">
+        <div class="gallery index">
+          <h2>gallery</h2>
+        </div>
+      </a>
+
+
+      <a href="https://wp.nyu.edu/sammykimura/">
+        <div class="blog index">
+          <h2>blog</h2>
+        </div>
+      </a>
+    </div>
+
+  </div> -->
+
+  <div id="work">
+    <h1>itp/ima help website redesign version 1</h1>
+    <img src="portfolio/0001.jpg" id="projectImg">
+    <img src="portfolio/0002.jpg" id="projectImg">
+
+    <h5>figma mockup</h5>
+  </div>
+
+  <div id="work">
+    <h1>itp/ima help website redesign version 2</h1>
+    <img src="portfolio/0003.jpg" id="projectImg">
+    <img src="portfolio/0004.jpg" id="projectImg">
+
+    <h5>figma mockup</h5>
+  </div>
+
+  <div id="animations">
+  </div>
+
+
+  <div id="lines2">
+
+
+
+
+    <div id="short2">
+    </div>
+    <div id="med2">
+    </div>
+
+    <div id="long2">
+    </div>
+
+
+
+  </div>
+
+  <footer>
+    <h2> samantha kimura</h2>
+    <!-- <div id="footerText">
+    </div> -->
+    <div id="icons">
+      <a href="https://www.instagram.com/sammy.kimura/?hl=en"><img src="https://img.icons8.com/material-outlined/35/000000/instagram-new--v1.png"/></a>
+      <a href="mailto:sk7925@nyu.edu"><img src="https://img.icons8.com/material-outlined/35/000000/email-open.png"/></a>
+    </div>
+    <!-- <a href="https://icons8.com/icon/85154/instagram">Instagram icon by Icons8</a> -->
+  </footer>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.7.12/two.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+
+  <script>
+
+  var elem = document.getElementById("animations");
+  //var elem2= document.getElementById("animation2");
+  var two = new Two({fitted:true}).appendTo(elem);
+    var shapeArray = Array();
+
+                                //x    y,  w,  h
+
+
+
+
+function makeHeart(moveRight,moveDown){
+  //line 1
+//for(let i=20;i<121;i+25){
+for(let i=100;i<220;i+=100){
+ var rectA =
+  two.makeRectangle(moveRight+i, moveDown+15,15, 15);//.noStroke().fill="#f21ba9";
+  rectA.stroke="none";
+  rectA.fill= "white";
+    //shapeArray.push( rectA)
+}
+  //LINE 2
+  for(let i=85;i<121;i+=35){
+    var rectB=
+     two.makeRectangle(moveRight+i,  moveDown+35, 15, 15);//.noStroke().fill="#f21ba9";
+
+     rectB.stroke="none"
+     rectB.fill= "white"
+       //shapeArray.push( rectA)
+  }
+
+  for(let i=180;i<216;i+=35){
+      var rectB =
+      two.makeRectangle(moveRight+i, moveDown+35, 15, 15);//.noStroke().fill="#f21ba9";
+      rectB.stroke="none"
+      rectB.fill= "white"
+        //shapeArray.push( rectA)
+    }
+
+  //line3
+  for(let i=105;i<196;i+=30){
+    var rectC =
+  two.makeRectangle(moveRight+i, moveDown+55, 15, 15);//.noStroke().fill="#f21ba9";
+    rectC.fill= "white"
+    rectC.stroke="none"
+    //shapeArray.push( rectA)
+  }
+
+  //line4
+  for(let i=120;i<181;i+=30){
+     var rectD =
+    two.makeRectangle(moveRight+i, moveDown+75, 15, 15);//.noStroke().fill="#f21ba9";
+    rectD.fill= "white"
+    rectD.stroke="none"
+    //shapeArray.push( rectA)
+  }
+
+  //line5
+  var rectE =
+  two.makeRectangle(moveRight+150, moveDown+95, 15, 15);//.noStroke().fill="#f21ba9";
+  rectE.fill= "white"
+  rectE.stroke="none"
+
+  var group = two.makeGroup(rectA,rectB,rectC,rectD,rectE);
+  console.log();
+
+  two.update();
+  //console.log(rectA,rectB,rectC,rectD,rectE);
+
+  two.bind('update', animate);
+  two.play();
+
+  function animate(frameCount) {
+
+// This code is called everytime two.update() is called; effectively 60 times per second.
+  //debugger;
+    //console.log(shapeArray);
+
+    if (group.scale > .9999) {
+      group.scale = group.rotation = 0;
+    }
+  var t = (1 - group.scale) * 0.1;
+  group.scale += t;
+  group.rotation += t *2* Math.PI;
+
+  //code block to be executed
+}
+};
+
+var firstPosRight=0;
+var firstPosDown=0;
+
+var moveRight=180;
+var moveDown=90;
+
+makeHeart(firstPosRight,firstPosDown);
+makeHeart(firstPosRight,moveDown);
+
+// for(let i=0;i<10;i+=1.5){
+// makeHeart(moveRight*[i],moveDown);
+// makeHeart(moveRight*[i],firstPosDown);
+// }
+</script>
+</body>
